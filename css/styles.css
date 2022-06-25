@@ -60,7 +60,7 @@ p {
 
 .layer {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     scroll-snap-align: center;
     background-color: var(--main-color);
     overflow-x: hidden;
@@ -248,6 +248,59 @@ ul > li{
     left: 200%;
 }
 
+.caffe{
+    width: 90%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    background-color: #d7b9a1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.caffe__info{
+    height: 100%;
+    width: 40%;
+    background-color: #d7b9a1;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    padding: 10px;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+    color: white;
+}
+
+.caffe__info > *{
+    padding: 2% 0;
+}
+
+.caffe__info > h1{
+    font-size: 1.5rem;
+}
+
+.caffe__info > h4{
+    font-size: .8rem;
+    line-height: 1.2;
+}
+
+.caffe__info button{
+    padding: 4px 5px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #d7b9a1;
+}
+
+.caffe__image{
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+}
+
 #contact {
     display: flex;
     justify-content: center;
@@ -390,9 +443,7 @@ form button{
 }
 
 @media only screen and (min-width: 500px) and (max-width: 840px) {
-    .home-pic-circle{
-        overflow: unset !important;
-    }
+
 
     .home-pic-circle::before{
         inset: -20% 20%;
